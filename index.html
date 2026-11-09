@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#f8f8f7"><meta name="description" content="习思想题库：练习、错题与间隔复习。">
+<title>温习 · 习思想</title><link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='15' fill='%232c332d'/%3E%3Cpath d='M20 18h24v28H20zM26 25h12M26 32h12M26 39h8' fill='none' stroke='%23fff' stroke-width='3'/%3E%3C/svg%3E"><link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="shell">
+ <aside class="sidebar">
+  <button class="brand" data-action="nav" data-view="review" aria-label="温习首页"><span class="brand-icon">温</span><span>温习<small>习思想</small></span></button>
+  <nav aria-label="主要导航">
+   <button data-action="nav" data-view="review"><span class="nav-icon">◷</span>复习<span class="count" id="due-count"></span></button>
+   <button data-action="nav" data-view="library"><span class="nav-icon">▤</span>题库<span class="count">225</span></button>
+   <button data-action="nav" data-view="wrong"><span class="nav-icon">↺</span>错题<span class="count" id="wrong-count"></span></button>
+   <button data-action="nav" data-view="saved"><span class="nav-icon">☆</span>收藏<span class="count" id="saved-count"></span></button>
+  </nav>
+  <div class="sidebar-bottom"><div class="overall"><span id="seen-count">0 / 225</span><div class="track"><i id="seen-bar"></i></div></div><button class="settings-btn" data-action="settings">设置与备份 <span>⌘</span></button></div>
+ </aside>
+ <main id="main" tabindex="-1"></main>
+</div>
+<dialog id="settings"><div class="dialog-head"><h2>设置</h2><button class="icon-btn" data-action="close-settings" aria-label="关闭设置">×</button></div><div id="settings-body"></div></dialog>
+<div class="toast" id="toast" role="status" hidden></div>
+<input id="import-file" type="file" accept="application/json,.json" hidden>
+<script src="data.js"></script><script src="app.js"></script>
+</body></html>
